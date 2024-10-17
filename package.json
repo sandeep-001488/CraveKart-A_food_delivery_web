@@ -1,0 +1,20 @@
+{
+  "name": "food_delivery_web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
+    "mongoose": "^8.7.1",
+    "next": "14.2.15",
+    "react": "^18",
+    "react-dom": "^18",
+    "validator": "^13.12.0"
+  }
+}
