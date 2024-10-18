@@ -1,12 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CustomerHeader from "../_components/CustomerHeader";
 import Footer from "../_components/Footer";
 import UserSignUp from "../_components/UserSignUp";
 import UserLogin from "../_components/UserLogin";
+import { useRouter } from "next/navigation";
 
 const UserAuth = (props) => {
   const [login, setLogin] = useState(true);
+  const router=useRouter()
+  useEffect(()=>{
+    const user=JSON.parse(localStorage.getItem("user"))
+    if(user){
+         router.push("/")
+    }
+  },[])
 
   return (
     <div>

@@ -12,13 +12,17 @@ const Page = () => {
   const [cartStorage, setCartStorage] = useState(
     JSON.parse(localStorage.getItem("cart"))
   );
+  // const [total, setTotal] = useState(() =>
+  //   cartStorage.length == 1
+  //     ? cartStorage[0].price
+  //     : cartStorage.reduce((a, b) => {
+  //         return a.price + b.price;
+  //       })
+  // );
   const [total, setTotal] = useState(() =>
-    cartStorage.length == 1
-      ? cartStorage[0].price
-      : cartStorage.reduce((a, b) => {
-          return a.price + b.price;
-        })
+    cartStorage.reduce((accumulator, item) => accumulator + item.price, 0)
   );
+
   const handleOrder = () => {
     if (JSON.parse(localStorage.getItem("user"))) {
       router.push("/order");
@@ -32,11 +36,10 @@ const Page = () => {
     );
 
     setCartStorage(updatedCart); 
-    setTotal(
-      updatedCart.length === 1
-        ? updatedCart[0].price
-        : updatedCart.reduce((a, b) => a.price + b.price, 0)
-    );
+   setTotal(
+     updatedCart.reduce((accumulator, item) => accumulator + item.price, 0)
+   );
+
     localStorage.setItem("cart", JSON.stringify(updatedCart)); 
 
     setIsCartLengthReduced(true); 

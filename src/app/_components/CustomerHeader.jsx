@@ -12,9 +12,8 @@ const CustomerHeader = ({
 }) => {
   const [cartLength, setCartLength] = useState(0);
   const [cartItem, setCartItem] = useState([]);
-  const userStorage = localStorage.getItem("user")
-    ? JSON.parse(localStorage.getItem("user"))
-    : null;
+  const userStorage = localStorage.getItem("user") && JSON.parse(localStorage.getItem("user"))
+   
   const [user, setUser] = useState(userStorage ? userStorage : null);
   const router = useRouter();
 

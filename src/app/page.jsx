@@ -58,7 +58,8 @@ export default function Home() {
             placeholder="Select Place"
             // value={selectedLocation}
             // onClick={() => setShowLocation(true)}
-            onChange={(e)=>getAllRestaurants({location:e.target.value})}
+            style={{ color: "red" }}
+            onChange={(e) => getAllRestaurants({ location: e.target.value })}
           />
           {/* <ul className="location-list">
             {showLocation &&
@@ -70,13 +71,19 @@ export default function Home() {
             type="text"
             className="search-input"
             placeholder="Enter food or restaurant"
-            onChange={(e)=>getAllRestaurants({restaurant:e.target.value})}
+            onChange={(e) => getAllRestaurants({ restaurant: e.target.value })}
+            style={{ color: "teal" }}
           />
         </div>
       </div>
       <div className="restaurant-list-container">
         {restaurants.map((item) => (
-          <div onClick={()=>router.push("explore/"+item.name+"?id="+item._id)} className="restaurant-wrapper">
+          <div
+            onClick={() =>
+              router.push("explore/" + item.name + "?id=" + item._id)
+            }
+            className="restaurant-wrapper"
+          >
             <div className="heading-wrapper">
               <h3>{item.name}</h3>
               <h5>Contact: {item.contact}</h5>
