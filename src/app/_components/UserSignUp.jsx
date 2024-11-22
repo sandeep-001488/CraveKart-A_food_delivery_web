@@ -10,7 +10,7 @@ const UserSignUp = () => {
   const [city, setCity] = useState("");
   const [address, setAddress] = useState("");
   const [mobile, setMobile] = useState("");
-  const router=useRouter()
+  const router = useRouter();
 
   const handleSignup = async (props) => {
     try {
@@ -61,7 +61,7 @@ const UserSignUp = () => {
   };
 
   return (
-    <div>
+    <div className="form-user-login">
       <div className="input-wrapper">
         <input
           type="text"
@@ -127,7 +127,11 @@ const UserSignUp = () => {
       </div>
 
       <div className="input-wrapper">
-        <button className="button" onClick={handleSignup} style={{cursor:"pointer"}}>
+        <button
+          className="button"
+          onClick={handleSignup}
+          style={{ cursor: "pointer" }}
+        >
           SignUp
         </button>
       </div>

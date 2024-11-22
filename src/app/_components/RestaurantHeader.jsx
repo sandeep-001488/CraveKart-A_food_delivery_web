@@ -24,16 +24,12 @@ const RestaurantHeader = () => {
   return (
     <div className="header-wrapper">
       <div className="logo">
-        <img
-          src="https://www.eatingwell.com/thmb/088YHsNmHkUQ7iNGP4375MiAXOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_7866255_foods-you-should-eat-every-week-to-lose-weight_-04-d58e9c481bce4a29b47295baade4072d.jpg"
-          alt=""
-          style={{ width: 100 }}
-        />
+        <Link href="/">
+          <img src="/main.jpeg" alt="" style={{ width: 100 }} />
+        </Link>
       </div>
       <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
+       
         {details && details.name ? (
           <>
             <li>

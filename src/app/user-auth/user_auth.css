@@ -1,0 +1,32 @@
+.auth{
+    display: flex;
+  background-color: #ff95953e;
+
+}
+.left{
+margin-top: 120px;   
+}
+.left p{
+    font-size: 20px;
+    color: blue;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+
+.right{
+    margin-left: 140px;
+    margin-top: 100px;
+}
+.right h1{
+    margin-left: 30px;
+    color: rgba(255, 69, 69, 0.921);
+}
+
+button{
+    color: rgb(34, 16, 156);
+    border: none;
+    margin-top: 10px;
+    margin-left: 17px;
+    cursor: pointer;
+    background-color:white;
+}

@@ -2,10 +2,11 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import "./deliveryHeader.css";
 
 const DeliveryHeader = () => {
   const [login, setLogin] = useState(false);
-  const router=useRouter()
+  const router = useRouter();
 
   useEffect(() => {
     const deliveryBoyData = localStorage.getItem("delivery")
@@ -13,38 +14,41 @@ const DeliveryHeader = () => {
       : null;
     if (deliveryBoyData !== null) {
       setLogin(true);
+      localStorage.setItem("deliverypartnerlogin", login);
     }
   }, []);
 
-  const handleLogout=()=>{
-    localStorage.removeItem("delivery")
+  const handleLogout = () => {
+    localStorage.removeItem("delivery");
     setLogin(false);
-    router.push("/deliveryPartner")
-  }
+    router.push("/deliveryPartner");
+  };
   return (
-    <div className="header-wrapper">
+    <div className="header-wrapper-delievry">
       <div className="logo">
-        <img
-          style={{ width: 100 }}
-          src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png"
-          alt="Logo"
-        />
+        <Link href="/">
+          <img style={{ width: 100 }} src="/main.jpeg" alt="Logo" />
+        </Link>
       </div>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        {login ? (
-          <li>
-          <button className="button" onClick={handleLogout}>Logout</button>
-          </li>
-        ):
-        (
-          <li>
-           <Link href="/deliveryPartner">Login</Link>
-          </li>
-        )}
-      </ul>
+
+      <div className="center">
+        <h1>DELIVERY DASHBOARD</h1>
+        <p className="header-below">Courier Associate Agent</p>
+      </div>
+
+      {login ? (
+        <button
+          className="delivery-header-btn"
+          style={{ cursor: "pointer" }}
+          onClick={handleLogout}
+        >
+          LogOut
+        </button>
+      ) : (
+        <Link href="/deliveryPartner">
+          <button className="delivery-header-btn">Login</button>
+        </Link>
+      )}
     </div>
   );
 };

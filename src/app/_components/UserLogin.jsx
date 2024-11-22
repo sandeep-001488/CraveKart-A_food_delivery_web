@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 import { useState } from "react";
+import "./user-login.css";
 
 const UserLogin = (props) => {
   const [email, setEmail] = useState("");
@@ -47,7 +48,7 @@ const UserLogin = (props) => {
   };
 
   return (
-    <div>
+    <div className="form-user-login">
       <div className="input-wrapper">
         <input
           type="text"
@@ -67,7 +68,7 @@ const UserLogin = (props) => {
         />
       </div>
       <div className="input-wrapper">
-        <button className="button" onClick={handleLogin} style={{cursor:"pointer"}}>
+        <button onClick={handleLogin} style={{ cursor: "pointer" }}>
           Login
         </button>
       </div>

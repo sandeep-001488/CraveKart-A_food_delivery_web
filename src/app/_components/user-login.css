@@ -1,0 +1,21 @@
+.form-user-login {
+  border: 1px solid rgb(228, 126, 126);
+  border-radius: 10px;
+  background-image: url('/th.jpeg');
+}
+.input-wrapper input {
+  color: rgb(102, 51, 153);
+  border-radius: 10px;
+  border: 1px solid rebeccapurple;
+}
+.input-wrapper button {
+  height: 30px;
+  width: 80px;
+  color: rgb(102, 51, 153);
+
+  margin-left: 65px;
+  border: 1px solid rebeccapurple;
+  background-color: #fff;
+
+  border-radius: 5px;
+}

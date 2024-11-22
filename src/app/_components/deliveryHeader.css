@@ -1,0 +1,32 @@
+.header-wrapper-delievry {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(248, 241, 241);
+}
+h1 {
+  color: blue;
+}
+.header-below{
+    color: blueviolet;
+
+}
+.center{
+    position: relative;
+}
+.header-below{
+    position: absolute;
+    /* margin-bottom: 50px; */
+    top: 40px;
+    right: 0px;
+    left: 90px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.delivery-header-btn {
+  height: 30px;
+  width: 80px;
+  /* margin-top: 15px; */
+  border: 1px solid red;
+  color: red;
+}

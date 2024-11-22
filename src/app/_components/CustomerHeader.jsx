@@ -90,15 +90,17 @@ const CustomerHeader = ({
   return (
     <div className="header-wrapper">
       <div className="logo">
-        <img
-          style={{ width: 100 }}
-          src="https://s.tmimgcdn.com/scr/1200x627/242400/food-delivery-custom-design-logo-template_242462-original.png"
-        />
+        <Link href="/">
+          <img
+            style={{ width: 100 }}
+            src="/main.jpeg"
+          />
+        </Link>
       </div>
       <ul>
-        <li>
+        {/* <li>
           <Link href="/">Home</Link>
-        </li>
+        </li> */}
         {user ? (
           <>
             <li>
