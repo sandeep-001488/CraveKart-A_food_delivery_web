@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -15,15 +15,15 @@ const RestaurantSignup = () => {
   const [error, setError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
-   const isValidEmail = (email) => {
-     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-     return emailRegex.test(email);
-   };
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
   const handleSignup = async () => {
-     if (!isValidEmail(email)) {
-       setError(true);
-       return false;
-     }
+    if (!isValidEmail(email)) {
+      setError(true);
+      return false;
+    }
     if (password !== c_password) {
       setPasswordError(true);
       return false;
@@ -67,8 +67,7 @@ const RestaurantSignup = () => {
 
   return (
     <>
-      <h3> Signup </h3>
-      <div>
+      <div className="restaurant-login">
         <div className="input-wrapper">
           <input
             type="text"

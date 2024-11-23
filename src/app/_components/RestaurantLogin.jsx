@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import "./restro-login-signup.css";
 
 const RestaurantLogin = () => {
   const [email, setEmail] = useState();
@@ -33,8 +34,7 @@ const RestaurantLogin = () => {
 
   return (
     <>
-      <h3>Login</h3>
-      <div>
+      <div className="restaurant-login">
         <div className="input-wrapper">
           <input
             className="input-field"

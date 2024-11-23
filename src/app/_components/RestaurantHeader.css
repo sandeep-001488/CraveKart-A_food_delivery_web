@@ -1,0 +1,33 @@
+.header-wrapper-restaurant-header{
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 600px;
+    align-items: center;
+    background-color: rgba(49, 255, 255, 0.121);
+}
+.restro-name {
+    width: auto; 
+    white-space: nowrap; 
+    font-weight: 700;
+    font-size: 20px;
+    color: teal;
+ 
+}
+/* .logo{
+
+    margin-bottom: 40px;
+} */
+.login-restro{
+    margin-left: 600px;
+}
+.restro-name p{
+    font-size: 25px;
+}
+.button-restro{
+    margin-right: 20px;
+    border: 1px solid teal;
+    border-radius: 10px;
+    color: teal;
+    font-weight: 700;
+    cursor: pointer;
+}

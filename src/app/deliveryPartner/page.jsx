@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import DeliveryHeader from "../_components/deliveryHeader";
 import { useRouter } from "next/navigation";
 import "./delivery-partner.css";
+import { usePathname } from "next/navigation";
 
 const Page = () => {
   const [loginMobile, setLoginMobile] = useState("");
@@ -16,6 +17,7 @@ const Page = () => {
   const [address, setAddress] = useState("");
   const [mobile, setMobile] = useState("");
   const router = useRouter();
+  const pathname = usePathname();
 
   // Signup handler
   const handleSignup = async () => {
@@ -66,45 +68,6 @@ const Page = () => {
     }
   };
 
-  // Login handler
-  // const handleLogin = async () => {
-  //   try {
-  //     const response = await fetch(
-  //       "http://localhost:3000/api/deliveryPartners/login",
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify({ loginMobile, loginPassword }),
-  //       }
-  //     );
-
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-
-  //     const data = await response.json();
-
-  //     if (data.success) {
-  //       const { result } = data;
-  //       const userWithoutPassword = { ...result };
-  //       delete userWithoutPassword.loginPassword;
-
-  //       localStorage.setItem("delivery", JSON.stringify(userWithoutPassword));
-  //       router.push("/deliveryDashboard");
-
-  //       // Reset login fields
-  //       setLoginMobile("");
-  //       setLoginPassword("");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error during login:", error);
-  //     alert("Login failed. Please try again.");
-  //     setLoginMobile("");
-  //     setLoginPassword("");
-  //   }
-  // };
   const handleLogin = async () => {
     try {
       const response = await fetch(
@@ -163,12 +126,15 @@ const Page = () => {
     }
   }, []);
   useEffect(() => {
-    if (showBg) {
+    if (pathname === "/deliveryPartner" && showBg) {
       document.body.classList.add("with-bg");
     } else {
       document.body.classList.remove("with-bg");
     }
-  }, [showBg]);
+      return () => {
+        document.body.classList.remove("with-bg");
+      };
+  }, [pathname, showBg]);
 
   return (
     <>

@@ -1,0 +1,35 @@
+.restaurant-login {
+  border: 1px solid rgb(228, 126, 126);
+  border-radius: 10px;
+  background-image: url('/th.jpeg');
+  background-repeat: repeat-y;
+
+  width: 250px;
+  margin: 20px auto;
+}
+.input-wrapper input {
+  color: teal;
+  border-radius: 10px;
+  border: 1px solid rebeccapurple;
+}
+input::placeholder {
+    color: rgb(175, 15, 124); 
+    font-style: italic;
+    font-size: 14px; 
+}
+
+.input-wrapper button {
+  height: 30px;
+  width: 80px;
+  color: red;
+  /* color: rgb(102, 51, 153); */
+
+  margin-left: 30px;
+  margin-right: 50px;
+  border: 1px solid rebeccapurple;
+  background-color: #fff;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+}

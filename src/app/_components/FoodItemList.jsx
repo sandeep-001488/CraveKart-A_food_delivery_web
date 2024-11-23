@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import './FoodItemList.css'
 
 const FoodItemList = () => {
   const [foodItems, setFoodItems] = useState([]);

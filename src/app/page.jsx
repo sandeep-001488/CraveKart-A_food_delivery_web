@@ -50,7 +50,7 @@ export default function Home() {
     <main>
       <CustomerHeader />
       <div className="main-page-banner">
-        <h1>Food Delivery App</h1>
+        <h1 style={{color:"white", fontSize:"25px"}}>Food Delivery App</h1>
         <div className="input-wrapper">
           <input
             type="text"

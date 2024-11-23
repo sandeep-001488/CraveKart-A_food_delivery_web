@@ -12,8 +12,9 @@ const CustomerHeader = ({
 }) => {
   const [cartLength, setCartLength] = useState(0);
   const [cartItem, setCartItem] = useState([]);
-  const userStorage = localStorage.getItem("user") && JSON.parse(localStorage.getItem("user"))
-   
+  const userStorage =
+    localStorage.getItem("user") && JSON.parse(localStorage.getItem("user"));
+
   const [user, setUser] = useState(userStorage ? userStorage : null);
   const router = useRouter();
 
@@ -88,13 +89,10 @@ const CustomerHeader = ({
   };
 
   return (
-    <div className="header-wrapper">
+    <div className="header-wrapper" style={{alignItems:"center"}}>
       <div className="logo">
         <Link href="/">
-          <img
-            style={{ width: 100 }}
-            src="/main.jpeg"
-          />
+          <img style={{ width: 100 }} src="/main.png" />
         </Link>
       </div>
       <ul>
@@ -135,7 +133,7 @@ const CustomerHeader = ({
         {/* )} */}
 
         <li>
-          <Link href="/">Add Restaurant</Link>
+          <Link href="/restaurant">Add Restaurant</Link>
         </li>
         <li>
           <Link href="/deliveryPartner">Delivery Partner</Link>

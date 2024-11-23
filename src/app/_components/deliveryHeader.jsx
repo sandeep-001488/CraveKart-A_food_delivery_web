@@ -27,13 +27,13 @@ const DeliveryHeader = () => {
     <div className="header-wrapper-delievry">
       <div className="logo">
         <Link href="/">
-          <img style={{ width: 100 }} src="/main.jpeg" alt="Logo" />
+          <img style={{ width: 100 }} src="/main.png" alt="Logo" />
         </Link>
       </div>
 
       <div className="center">
         <h1>DELIVERY DASHBOARD</h1>
-        <p className="header-below">Courier Associate Agent</p>
+        <p className="header-below">-Courier Associate Agent</p>
       </div>
 
       {login ? (

@@ -72,20 +72,7 @@ margin: 10px;
   color: red;
   font-size: 13px;
 }
-table, th, td{
-  border:  1px solid #000 ;
-  border-collapse: collapse;
-  padding: 10px;
-}
-table td button{
-  margin: 5px;
-}
-table img {
-  width: 90px;
-  border: 1px solid black;
-  border-radius: 50%;
-  
-}
+
 
 .main-page-banner,.restaurant-page-banner{
   background-image: url('https://a.storyblok.com/f/88809/1150x450/30a9c4f9a6/igevia_header_fastfood01_450.jpg');

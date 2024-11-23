@@ -1,0 +1,25 @@
+table{
+    margin-left: 10px;
+}
+table, th, td{
+  border:  1px solid teal ;
+  border-collapse: collapse;
+  padding: 10px;
+}
+table td button{
+  margin: 5px;
+}
+table thead tr td{
+    color: teal;
+}
+table tbody tr td{
+    font-size: 18px;
+    color: tomato;
+
+}
+table img {
+  width: 90px;
+  border: 1px solid black;
+  border-radius: 50%;
+  
+}

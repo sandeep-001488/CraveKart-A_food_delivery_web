@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "./addFoodItem.css";
 
-const AddFoodItems = ({setAddItem}) => {
+const AddFoodItems = ({ setAddItem }) => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [path, setPath] = useState("");
@@ -45,7 +46,7 @@ const AddFoodItems = ({setAddItem}) => {
   };
 
   return (
-    <div className="container">
+    <div className="add-item-form">
       <h1>Add New Food Item</h1>
       <div className="input-wrapper">
         <input
